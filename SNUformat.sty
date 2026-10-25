@@ -1,0 +1,73 @@
+% Set custom page geometry for the manuscript, including paper size and margins
+\usepackage[paperwidth=19cm,paperheight=26cm,left=3cm,right=3cm,top=3.5cm,bottom=1.5cm]{geometry}
+
+\addtolength{\voffset}{-1.5cm}
+\renewcommand{\baselinestretch}{1.7}
+% Control fontsize of "Abstract" title
+\renewcommand{\abstractname}{\fontsize{16}{16pt}\selectfont Abstract}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{natbib}
+\usepackage{tocbibind} % automatically add "Reference" in table of contents.
+\renewcommand{\bibfont}{\footnotesize}
+\renewcommand\bibname{References} % set bib name as "References"
+
+% For korean text support in the manuscript
+\usepackage{kotex}
+
+% turn-off hyper-link in reference and chapter
+\usepackage{hyperref} % link to a section
+\usepackage{xurl} % force to line break in long url.
+
+% for chapter title
+% NOTE: 
+% make chapter format
+% * reference: https://stackoverflow.com/questions/66884765/how-to-increase-font-size-of-just-chapter-names-in-latex
+\usepackage{sectsty}
+\chapternumberfont{\Large} 
+\chaptertitlefont{\Large}
+
+% for section
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{4}
+
+% for graphics
+\usepackage{graphicx} % for including graphics
+\usepackage{pdflscape}
+
+% for table
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage[]{multirow}
+\renewcommand*{\arraystretch}{1.4}
+
+% for table/figure captions using "." instead of ":"
+\usepackage[labelsep=period]{caption}
+\usepackage{adjustbox}
+
+% for contents
+\usepackage{anyfontsize} % for pretty fontsize
+\usepackage{lipsum}      % generating random contents
+
+% for maths
+\usepackage{amsmath, calc}
+\usepackage{bm} % for using "\bm" in equation.
+
+% for code listings
+\usepackage{listings}
+
+% for TODO notes
+% Not to show \todo, use \usepackage[disable]{todonotes}.
+\usepackage[disable,textsize=scriptsize,backgroundcolor=white,textcolor=red]{todonotes}
+
+% for title page formatting
+\usepackage{titlesec}
+\titleformat{\chapter}[display]
+{\normalfont\Large\bfseries}{\chaptertitlename\ \thechapter}{10pt}{\huge}
+
+% NOTE: Put your acronym definition here using the "acro" package.
+\usepackage{acro}
+\DeclareAcronym{AI}{short=AI,long=Artificial Intelligence}
