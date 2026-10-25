@@ -2,6 +2,8 @@
 
 LaTeX template for PhD dissertation at SNU (Seoul National University). Officially, SNU does not provide an official LaTeX template for dissertations. Lots of students have created their own templates.
 
+:blush: I hope this template helps PhD students write their dissertations more easily and successfully complete their long academic journey.
+
 This repository is inspired by similar LaTeX templates for PhD dissertation. You can find another example SNU PhD templates at [SNU PhD Dissertation Templates](https://github.com/snu-phd-templates). Feel free to choose the template that best fits your needs and preferences :blush:.
 
 > [!NOTE] Other SNU PhD Dissertation Templates
