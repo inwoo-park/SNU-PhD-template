@@ -98,12 +98,12 @@
 % scale=0.8
 % offset=0cm 1cm % x: 0cm 변경 없음/ y: 1cm 위로 이동
 \newpage
+% Initialize the approval sheet inclusion
+\input{./templates/approval_sheet.tex}
+% NOTE: If you have approval sheet (인준지), include it using the "includepdf" instead of "input"
 % \includepdf[frame=false, % for debuggging
 %         width=\paperwidth,
-%         offset=0cm -1.5cm]{./1title_next_certificate_template_PIW.pdf}
-% \includepdf[frame=false, % for debuggging
-%         width=\paperwidth,
-%         offset=0cm -1.5cm]{./1title_next_certificate_template_PIW_signed.pdf}
+%         offset=0cm -1.5cm]{./templates/approval_sheet.pdf}
 
 %% ============================================================
 %% Abstract Section
@@ -120,11 +120,16 @@
     \lipsum[1]
 
 \vfill
-\noindent{\textbf{Key words}: PUT YOUR KEYWORDS
-}
+\noindent{\textbf{Key words}: PUT YOUR KEYWORDS}
 
 \noindent{\textbf{Student Number}: \tStudentNumber}
 \end{abstract}
+
+%% ============================================
+%% IMPORTANT: Reset page counter for main content
+%% \begin{abstract} ... \end{abstract} does not count towards the main content page numbering, so we reset the page counter here.
+%% ============================================
+\setcounter{page}{2}
 
 % ============================================================
 % Table of contents, list of figures, and list of tables
@@ -199,6 +204,33 @@ First use the acronym with \verb|\ac{AI}|: \ac{AI}.
 Second use the acronym with \verb|\ac{AI}| again: \ac{AI}.
 
 \verb|\acs{AI}| : Force the AI acronym to be plural: \acs{AI}
+
+
+\subsection{Example: Figures and Tables}
+
+First, include the figure using following command in your LaTeX document:
+
+\begin{lstlisting}[language=TeX]
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{Figures/Fig_Example.png}
+\caption{PUT YOUR CAPTON}
+\label{fig:example}
+\end{figure}
+\end{lstlisting}
+
+You can cite the figure using the \verb|\ref{fig:example}| command as follows:
+
+\begin{itemize}
+\item \verb|Figure~\ref{fig:example}| : Figure \ref{fig:example}
+\end{itemize}
+
+\begin{figure}
+\centering
+\includegraphics[width=1.0\textwidth]{Figures/Fig_Example.png}
+\caption{PUT YOUR CAPTON}
+\label{fig:example}
+\end{figure}
 
 % Chapter 3
 \chapter{TITLE OF CHAPTER 3}\label{c:chp3}
